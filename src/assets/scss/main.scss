@@ -1,0 +1,44 @@
+@import './_variables';
+@import './_fonts';
+@import './_buttons';
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  body & {
+    margin: 0;
+  }
+}
+
+body {
+  background: darken(#fff, 2);
+}
+
+.markdown {
+  @import './markdown';
+
+
+  body {
+    padding: 10px;
+  }
+
+  p {
+    code {
+    margin: 0 !important;
+    padding: 0;
+    background: none;
+   border: 0;
+    font-weight: bold;
+    color: rgb(233, 30, 99);
+    font-style: italic;
+}
+  }
+  
+}
