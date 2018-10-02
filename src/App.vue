@@ -31,15 +31,24 @@ export default Vue.extend({
   },
   methods: {
     onKeyUp(ev: KeyboardEvent) {
+
       const isLeft = ev.keyCode === 37
       const isRight = ev.keyCode === 39
+      const isSpace = ev.keyCode === 32
+      const isEnter = ev.keyCode === 13
+
+      console.log(ev.keyCode)
 
       if (isLeft) {
         this.$router.back()
         return
       }
 
-      if (isRight) {
+      if (isRight || isSpace || isEnter) {
+        // stop propagating
+        ev.preventDefault()
+        ev.stopPropagation()
+        ev.cancelBubble = true
         this.$store.commit('nextStep', this.$router)
       }
     }

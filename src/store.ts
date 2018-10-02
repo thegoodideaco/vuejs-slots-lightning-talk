@@ -41,6 +41,9 @@ export default new Vuex.Store({
   getters: {
     activeURL: (state, getters, rootState, rootGetters) => {
       return `section/${state.section}/${state.currentStep}`
+    },
+    sectionCompletion: (state) => {
+      return state.currentStep / state.totalSteps
     }
   },
   actions: {}

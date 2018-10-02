@@ -9,8 +9,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import ProgressBar from './ProgressBar.vue'
 export default Vue.extend({
-
+  components: {
+    ProgressBar
+  }
 })
 </script>
 

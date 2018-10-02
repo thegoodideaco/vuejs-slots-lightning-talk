@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es6",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
@@ -20,6 +20,7 @@
       ]
     },
     "lib": [
+      "es6",
       "esnext",
       "dom",
       "dom.iterable",
@@ -27,14 +28,16 @@
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.md",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "./src/**/*.ts",
+    "./src/**/*.md",
+    "./src/**/*.tsx",
+    "./src/**/*.vue",
+    "./tests/**/*.ts",
+    "./tests/**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "node_modules/**/*.ts"
   ]
 }

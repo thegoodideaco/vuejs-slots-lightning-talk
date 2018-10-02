@@ -74,13 +74,11 @@ export default Vue.extend({
 <style scoped lang="scss">
 .markdown {
   user-select: none;
-  padding: 10px;
+  padding: 15px;
   display: inline-block;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  min-width: 550px;
-  max-width: 30vw;
   border-right: 1px solid rgba(#000, 0.15);
   background-color: darken(#fff, 5);
 

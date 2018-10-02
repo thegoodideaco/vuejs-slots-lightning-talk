@@ -9,7 +9,7 @@
     <!-- Main Content Container -->
     <div class="main__display__content">
 
-      <router-view />
+      <router-view class="fill" />
     </div>
   </div>
 </template>
@@ -65,6 +65,18 @@ export default Vue.extend({
 //   flex-flow: column nowrap;
 //   justify-content: stretch;
 // }
+
+.fill {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-content: stretch;
+  justify-content: center;
+}
+
+.markdown {
+  width: 40%;
+}
 
 .section__page {
   height: 100%;
