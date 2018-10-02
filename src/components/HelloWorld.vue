@@ -66,13 +66,10 @@
 </template>
 
 <script lang="ts">
-// TODO: delete this component, unused
-import { Component, Prop, Vue } from 'vue-property-decorator'
-
-@Component
-export default class HelloWorld extends Vue {
-  @Prop() private msg!: string
-}
+import Vue from 'vue'
+export default Vue.extend({
+  props: ['msg']
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

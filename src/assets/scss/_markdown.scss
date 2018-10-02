@@ -26,7 +26,7 @@ p {
 }
 
 a {
-  color: #4183c4;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -63,18 +63,22 @@ h6 {
   cursor: text;
   position: relative;
 //   margin: 1em 0 15px;
-margin-bottom: 20px;
+margin-bottom: 10px;
   padding: 0;
 }
 
 h1 {
   font-size: 2.5em;
-  border-bottom: 1px solid #ddd;
+//   border-bottom: 1px solid #ddd;
 }
 
 h2 {
   font-size: 2em;
-  border-bottom: 1px solid #eee;
+  margin-top: 30px;
+  margin-bottom: 0;
+  line-height: 1;
+  color:rgb(59, 190, 255);
+//   border-bottom: 1px solid #eee;
 }
 
 h3 {
@@ -204,9 +208,19 @@ dl dd> :last-child {
 }
 
 blockquote {
-  border-left: 4px solid #DDD;
+//   border-left: 4px solid #DDD;
   padding: 0 15px;
-  color: #777;
+  padding-left: 0;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 1rem;
+
+  > * {
+    &:first-child {
+      margin-bottom: 5px;
+      line-height: normal;
+    }
+  }
 }
 
 blockquote> :first-child {
@@ -259,7 +273,16 @@ tt {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
   font-size: 1rem;
   color: #333333;
+
+  
 }
+
+blockquote code {
+    background: none;
+    border: 0;
+    font-size: inherit;
+    color: #fff;
+  }
 
 pre>code {
   margin: 0;
@@ -281,15 +304,16 @@ pre>code {
 }
 
 pre {
-  background-color: #458;
+  background-color: rgb(156, 83, 83);
   color: #fff;
-  border: 1px solid #ccc;
+  border: 3px solid #fff;
   font-size: 14px;
+  display: inline-block;
   line-height: 19px;
   overflow: auto;
-  padding: 6px 10px;
+  padding: 16px 15px;
   border-radius: 3px;
-  margin: 26px 0;
+  margin: 10px 0;
   user-select: text;
 }
 

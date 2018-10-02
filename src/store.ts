@@ -21,7 +21,7 @@ export default new Vuex.Store({
 
       // Store has a watcher in App.vue
       // This will watch for route change, and if so, update the store
-      // Contol the store by modifying the router
+      // Control the store by modifying the router
       $router.push(`/section/${newSection}/${newStep}`)
     },
     updateTotalSteps(state, steps) {
@@ -43,7 +43,7 @@ export default new Vuex.Store({
       return `section/${state.section}/${state.currentStep}`
     },
     sectionCompletion: (state) => {
-      return state.currentStep / state.totalSteps
+      return state.totalSteps > 0 ? state.currentStep / state.totalSteps : 0
     }
   },
   actions: {}

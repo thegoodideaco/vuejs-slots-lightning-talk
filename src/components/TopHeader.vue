@@ -4,12 +4,14 @@
     <div>
       Vue.js Slots // Lightning Talk with Jon Snyder
     </div>
+
+    <progress-bar></progress-bar>
   </header>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import ProgressBar from './ProgressBar.vue'
+import ProgressBar from '@/components/ProgressBar.vue'
 export default Vue.extend({
   components: {
     ProgressBar

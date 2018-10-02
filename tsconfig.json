@@ -6,38 +6,28 @@
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
-    "experimentalDecorators": true,
+    // "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": [
-      "webpack-env"
-    ],
+    "types": ["webpack-env"],
+    "declaration": true,
+    "declarationDir": "./dec",
+    "pretty": true,
+    // "allowJs": true,
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     },
-    "lib": [
-      "es6",
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    "lib": ["es6", "esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
-    "./src/**/*.ts",
-    "./src/**/*.md",
-    "./src/**/*.tsx",
-    "./src/**/*.vue",
-    "./tests/**/*.ts",
-    "./tests/**/*.tsx"
+    "src/**/*.vue",
+    "src/**/*.ts",
+    "src/**/*.md",
+    "src/**/*.tsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
   ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "node_modules/**/*.ts"
-  ]
+  "exclude": ["node_modules", "dist", "node_modules/**/*.ts"]
 }

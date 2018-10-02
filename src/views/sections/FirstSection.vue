@@ -1,11 +1,11 @@
 <template>
   <div class="first-section">
-    <div v-if="step > 3 && step < 7" v-cloak>
+    <div v-show="step > 3 && step < 7" v-cloak>
       <h1>A Slot in a nutshell</h1>
       <img src="@/assets/images/nut1.png">
     </div>
 
-      <div v-else-if="step > 6">
+      <div v-if="step > 6">
         <button>Hello</button>
       </div>
 

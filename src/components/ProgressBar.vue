@@ -1,35 +1,54 @@
 <template>
   <div class="progress-bar">
-    hello routes: {{routeChildren}}
-    <test-component />
+    <span v-for="item in routeChildren"
+          :key="item.index"
+          :class="{active: item.index === activeSection}">
+      {{item.percent}}
+    </span>
   </div>
 </template>
 
 <script lang="ts">
+
+interface RouteChild {
+  index: number,
+  completed: boolean,
+  percent: number
+}
+
 import Vue from 'vue'
-import VueRouter from 'node_modules/vue-router/types'
+import VueRouter from 'vue-router/types'
 import { mapState, mapGetters } from 'vuex'
 import { get } from 'lodash'
 export default Vue.extend({
-  components: {
-    TestComponent: () => import('@/components/TopHeader.vue')
-  },
-  props: ['hello'],
   computed: {
-    routeChildren(): any[] {
+    routeChildren(): RouteChild[] {
       const v = get(this.$router, 'options.routes', []) as any[]
+
+      // filter only the section routes
       return v.find((f) => {
         return f.path === '/section'
       }).children.map((vv: any) => {
 
         const index: number = parseInt(vv.path, 10)
-        const completed: boolean = this.activeSection > index
-        const percent: number | null = this.activeSection > index ? this.$store.getters.sectionCompletion : 0
-        return {
+        let completed: boolean = this.activeSection > index
+        let percent: number | null = 0
+
+        // Passed
+        if (index < this.activeSection) {
+          completed = true
+          percent = 1
+          // Current
+        } else if (index === this.activeSection) {
+          completed = false
+          percent = this.sectionCompletion
+        }
+        const r: RouteChild = {
           index,
           completed,
           percent
         }
+        return r
       })
     },
     activeSection(): number {
@@ -40,9 +59,9 @@ export default Vue.extend({
       'currentStep',
       'totalSteps'
     ]),
-    ...mapGetters([
-      'sectionCompletion'
-    ])
+    sectionCompletion(): number {
+      return this.$store.getters.sectionCompletion
+    }
   }
 })
 </script>
@@ -52,5 +71,14 @@ export default Vue.extend({
 .progress-bar {
   flex: 1 0 auto;
   margin-left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  > span {
+    &.active {
+      color: blue;
+    }
+  }
 }
 </style>

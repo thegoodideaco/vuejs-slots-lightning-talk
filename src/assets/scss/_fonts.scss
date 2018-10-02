@@ -1,7 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Carter+One|Nanum+Pen+Script|Spinnaker|Work+Sans');
+
+// font-family: 'Carter One', cursive;
+// font-family: 'Spinnaker', sans-serif;
+// font-family: 'Alegreya Sans SC', sans-serif;
+// font-family: 'Nanum Pen Script', cursive;
+// font-family: 'Work Sans', sans-serif;
 
 body,
 html {
-  font-family: 'Bree Serif', serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Alegreya Sans SC', sans-serif;
 }

@@ -20,7 +20,7 @@
     "no-console": false,
     "no-debugger": false,
 
-
+    "align": true,
     "trailing-comma": [
       true,
       {
@@ -33,6 +33,8 @@
         "esSpecCompliant": true
       }
     ],
+
+    "jsdoc-format": [true, "check-multiline-start"],
 
     "curly": [true, "ignore-same-line"]
   }

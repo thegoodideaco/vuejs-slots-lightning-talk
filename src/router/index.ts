@@ -73,11 +73,116 @@ export default new Router({
             {
               path: ':step',
               props: true,
-              component: () => import('@/views/sections/MultipleSlotSection.vue')
+              component: () => import('@/views/sections/AddingSlots.vue')
             }
           ]
+        },
+        {
+          path: '5',
+          props: {
+            section: '5'
+          },
+          component: () => import('@/views/SectionPage.vue'),
+          redirect: '/section/5/1',
+          children: [
+            {
+              path: ':step',
+              props: true,
+              component: () =>
+                import('@/views/sections/MultipleSlotSection.vue')
+            }
+          ]
+        },
+        {
+          path: '6',
+          props: {
+            section: '6'
+          },
+          component: () => import('@/views/SectionPage.vue'),
+          redirect: '/section/6/1',
+          children: [
+            {
+              path: ':step',
+              props: true,
+              component: () =>
+                import('@/views/sections/MultipleSlotSection.vue')
+            }
+          ]
+        },
+        {
+          path: '7',
+          props: {
+            section: '7'
+          },
+          component: () => import('@/views/SectionPage.vue'),
+          redirect: '/section/7/1',
+          children: [
+            {
+              path: ':step',
+              props: true,
+              component: () =>
+                import('@/views/sections/MultipleSlotSection.vue')
+            }
+          ]
+        },
+        {
+          path: '8',
+          props: {
+            section: '8'
+          },
+          component: () => import('@/views/SectionPage.vue'),
+          redirect: '/section/8/1',
+          children: [
+            {
+              path: ':step',
+              props: true,
+              component: () =>
+                import('@/views/sections/MultipleSlotSection.vue')
+            }
+          ]
+        },
+        {
+          path: '9',
+          props: {
+            section: '9'
+          },
+          component: () => import('@/views/SectionPage.vue'),
+          redirect: '/section/9/1',
+          children: [
+            {
+              path: ':step',
+              props: true,
+              component: () =>
+                import('@/views/sections/MultipleSlotSection.vue')
+            }
+          ]
+        },
+        {
+          path: '10',
+          props: {
+            section: '10'
+          },
+          component: () => import('@/views/SectionPage.vue'),
+          redirect: '/section/10/1',
+          children: [
+            {
+              path: ':step',
+              props: true,
+              component: () =>
+                import('@/views/sections/MultipleSlotSection.vue')
+            }
+          ]
+        },
+        {
+          path: '11/:step',
+          redirect: '/end',
+          name: 'end'
         }
       ]
+    },
+    {
+      path: '/end',
+      component: () => import('@/views/EndPage.vue')
     },
     {
       path: '*',

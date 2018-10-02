@@ -5,12 +5,23 @@
     <top-header />
 
     <!-- Section View -->
-    <router-view />
+    <transition appear-to-class="animated fadeIn faster"
+                mode="out-in"
+                enter-to-class="animated fadeIn faster"
+                enter-class="animated fadeIn faster"
+                leave-class="animated fadeOut faster"
+                leave-to-class="animated fadeOut faster"
+                leave-active-class="animated fadeOut faster">
+
+      <keep-alive>
+        <router-view :key="$store.state.section" />
+
+      </keep-alive>
+    </transition>
   </div>
 </template>
 
 <script lang="ts">
-
 import Vue from 'vue'
 import TopHeader from '@/components/TopHeader.vue'
 
@@ -64,5 +75,15 @@ export default Vue.extend({
       flex: 1;
     }
   }
+}
+
+.showit {
+  transition: opacity 1000ms ease;
+  opacity: 1;
+}
+
+.hideit {
+  transition: opacity 1000ms ease;
+  opacity: 0;
 }
 </style>

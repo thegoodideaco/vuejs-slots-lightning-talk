@@ -16,9 +16,9 @@
 
 <script lang="ts">
 import marked from 'marked'
-import { Component, Vue } from 'vue-property-decorator'
 import BasicSlotExample from '@/components/BasicSlotExample.vue'
 import MarkdownDisplay from '@/components/MarkdownDisplay.vue'
+import Vue from 'vue'
 // import output from '@/'
 // tslint:disable-next-line:no-var-requires
 
@@ -76,24 +76,22 @@ export default Vue.extend({
 
 .markdown {
   width: 40%;
+  // overflow: hidden;
 }
 
 .section__page {
   height: 100%;
-  background-color: #75b5bd;
+  color: rgb(47, 255, 163);
+  background-color: rgb(50, 70, 90);
   display: flex;
+}
 
-  > * {
-    // height: 100vh;
-    overflow-y: auto;
-
-    &:last-child {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
+.main__display__content {
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
 

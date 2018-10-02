@@ -75,28 +75,29 @@ export default Vue.extend({
 .markdown {
   user-select: none;
   padding: 15px;
-  display: inline-block;
+  display: inline-table;
   height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  border-right: 1px solid rgba(#000, 0.15);
-  background-color: darken(#fff, 5);
+  
+  // overflow-y: auto;
+  // overflow-x: hidden;
+  // border-right: 1px solid rgba(#000, 0.15);
+  // background-color: darken(#fff, 5);
 
   > * {
     opacity: 1;
-    transition: opacity 400ms linear,
-      transform 600ms cubic-bezier(0, 0.82, 0, 1.07);
+    transition: opacity 100ms linear,
+      transform 600ms cubic-bezier(0, 1.74, 0.68, 0.96);
     transform-origin: left top;
     &.hidden {
       opacity: 0;
       visibility: hidden;
       height: 0;
-      transform: perspective(380px) rotateY(97deg) rotateZ(45deg);
+      transform: perspective(380px) translateX(-100px) translateZ(-101px);
       // display: none;
     }
 
     &.showing {
-      transform: perspective(380px) rotateY(0);
+      transform: perspective(380px) translateX(0) translateZ(0);
     }
   }
 }
