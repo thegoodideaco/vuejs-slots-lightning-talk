@@ -5,19 +5,22 @@
     <top-header />
 
     <!-- Section View -->
-    <transition appear-to-class="animated fadeIn faster"
-                mode="out-in"
-                enter-to-class="animated fadeIn faster"
-                enter-class="animated fadeIn faster"
-                leave-class="animated fadeOut faster"
-                leave-to-class="animated fadeOut faster"
-                leave-active-class="animated fadeOut faster">
+    <keep-alive>
+      <transition appear-to-class="animated fadeIn faster"
+                  mode="out-in"
+                  enter-to-class="animated fadeIn faster"
+                  enter-class="animated fadeIn faster"
+                  leave-class="animated fadeOut faster"
+                  leave-to-class="animated fadeOut faster"
+                  leave-active-class="animated fadeOut faster">
 
-      <keep-alive>
+        <!-- I am disabling keep-alive as it renders new content before the transition -->
+        <!-- <keep-alive> -->
         <router-view :key="$store.state.section" />
 
-      </keep-alive>
-    </transition>
+        <!-- </keep-alive> -->
+      </transition>
+    </keep-alive>
   </div>
 </template>
 

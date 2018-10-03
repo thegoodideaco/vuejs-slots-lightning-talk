@@ -1,13 +1,14 @@
 <template>
   <div class="first-section">
-    <div v-show="step > 3 && step < 7" v-cloak>
+
+    <div v-if="step < 4">
+        <img src="@/assets/images/gifs/1.gif">
+    </div>
+
+    <div v-else>
       <h1>A Slot in a nutshell</h1>
       <img src="@/assets/images/nut1.png">
     </div>
-
-      <div v-if="step > 6">
-        <button>Hello</button>
-      </div>
 
     </div>
 </template>
@@ -28,5 +29,9 @@ h1 {
 .first-section {
   display: flex;
   flex-flow: column nowrap;
+
+  > * {
+    text-align: center;
+  }
 }
 </style>

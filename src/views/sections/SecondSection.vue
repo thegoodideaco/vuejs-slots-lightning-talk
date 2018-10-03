@@ -2,24 +2,47 @@
   <div class="second-section">
 
     <div v-if="section===2">
-      <div v-if="step < 4">
-        I'm just a lonely page with nothing on it :(
+      <div v-if="step < 3">
+        <img src="@/assets/images/gifs/buttonclick.gif">
       </div>
 
-      <div v-else>
-        <h2>My Simple Button</h2>
-        <simple-button></simple-button>
+        <div v-else>
+          <h2>My Simple Button</h2>
+          <simple-button></simple-button>
+        </div>
       </div>
-    </div>
 
-    <div v-else-if="section===3">
-     <simple-button>Button 1</simple-button>
+      <div class="flex-column centered"
+           v-else-if="section===3">
+
+        <div v-if="step < 3">
+          <h2>My Simple Button</h2>
+          <simple-button></simple-button>
+        </div>
+
+        <div v-else-if="step < 4">
+          <h2>Multiple Simple Buttons</h2>
+          <simple-button>Button 1</simple-button>
           <simple-button>Button 2</simple-button>
           <simple-button>Button 3</simple-button>
           <simple-button>Button 4</simple-button>
           <simple-button>Button 5</simple-button>
+        </div>
+
+        <div v-else
+             class="flex-column">
+          <img src="@/assets/images/gifs/wtf.gif">
+          <div>
+            <simple-button>Button 1</simple-button>
+            <simple-button>Button 2</simple-button>
+            <simple-button>Button 3</simple-button>
+            <simple-button>Button 4</simple-button>
+            <simple-button>Button 5</simple-button>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
 </template>
 
 <script lang="ts">
@@ -61,6 +84,10 @@ h1 {
   margin: 20px 0;
 }
 
+img {
+  margin-bottom: 25px;
+}
+
 .second-section {
   text-align: center;
   display: flex;
@@ -71,5 +98,11 @@ h1 {
   h2 {
     margin-bottom: 50px;
   }
+}
+
+img {
+  width: auto;
+  margin: auto;
+  margin-bottom: 25px;
 }
 </style>

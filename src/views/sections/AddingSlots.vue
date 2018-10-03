@@ -1,17 +1,24 @@
 <template>
   <div class="second-section">
 
-    <div v-if="step < 4">
-      <simple-button>Button 1</simple-button>
-      <simple-button>Button 2</simple-button>
-      <simple-button>Button 3</simple-button>
-      <simple-button>Button 4</simple-button>
-      <simple-button>Button 5</simple-button>
+    <div v-if="step < 5">
+      <h2>Multiple Simple Buttons</h2>
+      <div>
+        <simple-button>Button 1</simple-button>
+        <simple-button>Button 2</simple-button>
+        <simple-button>Button 3</simple-button>
+        <simple-button>Button 4</simple-button>
+        <simple-button>Button 5</simple-button>
+      </div>
     </div>
     <div v-else>
-      <simple-button-with-slot><h3>Custom Title</h3></simple-button-with-slot>
+      <simple-button-with-slot>
+        <h3>Custom Title</h3>
+      </simple-button-with-slot>
       <simple-button-with-slot><em>Italic Title</em></simple-button-with-slot>
-      <simple-button-with-slot><h1>Huge Title</h1></simple-button-with-slot>
+      <simple-button-with-slot>
+        <h1>Huge Title</h1>
+      </simple-button-with-slot>
       <simple-button-with-slot><small>Small Title</small></simple-button-with-slot>
       <simple-button-with-slot>A Title with reallllly long text</simple-button-with-slot>
     </div>

@@ -2,7 +2,19 @@
   <div id="app">
     <!-- <top-header /> -->
     <!-- Main display -->
-    <router-view />
+
+    <keep-alive>
+      <transition appear-to-class="animated fadeIn faster"
+                  mode="out-in"
+                  enter-to-class="animated fadeIn faster"
+                  enter-class="animated fadeIn faster"
+                  leave-class="animated fadeOut faster"
+                  leave-to-class="animated fadeOut faster"
+                  leave-active-class="animated fadeOut faster">
+        <router-view />
+
+      </transition>
+    </keep-alive>
   </div>
 </template>
 

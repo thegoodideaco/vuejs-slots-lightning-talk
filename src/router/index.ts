@@ -105,10 +105,12 @@ export default new Router({
               path: ':step',
               props: true,
               component: () =>
-                import('@/views/sections/MultipleSlotSection.vue')
+                import('@/views/sections/PanelComponentSection.vue')
             }
           ]
         },
+
+        // Panel Component 2
         {
           path: '7',
           props: {
@@ -121,7 +123,7 @@ export default new Router({
               path: ':step',
               props: true,
               component: () =>
-                import('@/views/sections/MultipleSlotSection.vue')
+                import('@/views/sections/PanelComponentSection.vue')
             }
           ]
         },
@@ -137,7 +139,7 @@ export default new Router({
               path: ':step',
               props: true,
               component: () =>
-                import('@/views/sections/MultipleSlotSection.vue')
+                import('@/views/sections/ScopedSlotsSection.vue')
             }
           ]
         },
@@ -153,7 +155,7 @@ export default new Router({
               path: ':step',
               props: true,
               component: () =>
-                import('@/views/sections/MultipleSlotSection.vue')
+                import('@/views/sections/ScopedSlotsSection.vue')
             }
           ]
         },
@@ -169,7 +171,7 @@ export default new Router({
               path: ':step',
               props: true,
               component: () =>
-                import('@/views/sections/MultipleSlotSection.vue')
+                import('@/views/sections/ScopedSlotsSection.vue')
             }
           ]
         },
